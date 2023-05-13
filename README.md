@@ -3,18 +3,21 @@
 ***
 
 # **I. Abstract**
-In various problem domains, it has been observed that the aggregate opinions of a group can outperform the results of any one individual in the group. We study the aggregate performance of a commercially available LLM known as ChatGPT across 10 nondeterministic runs through the math word problem question sets DRAW-1K, ALG-514 and NLU-ASDIV. We find the aggregate using majority voting performs better in terms of providing more accurate responses and fewer wrong responses compared to any individual run. Later on, we propose various election methods for selecting the best response from the various sample solutions which appears to bring about even greater improvements in performance. The dataset of ChatGPT’s responses to the various question sets are provided in this repo.
+In various problem domains, it has been observed that the aggregate opinions of a group can outperform the results of any one individual in the group. We study the aggregate performance of a commercially available LLM known as ChatGPT across 10 nondeterministic runs through the math word problem question sets DRAW-1K, ALG-514 and NLU-ASDIV. We find the aggregate using majority voting performs better in terms of providing more accurate responses and fewer wrong responses compared to any individual run. Later on, we propose various election methods for selecting the best response from the various sample solutions which appears to bring about even greater improvements in performance. The dataset of ChatGPT’s responses to the various question sets are also provided in this repo.
 
 # **II. Introduction**
-The "wisdom of the crowd" refers to the theory that when independent judgements are combined it can produce a final judgement with greater accuracy. Due to the non-determinism of LLMs such as ChatGPT, we treat each sample solution provided by ChatGPT as an independent judgement in this experiment.  
+Large-language models have gained popularity in recent years. At the moment, many consider OpenAI’s ChatGPT as state-of-the-art. However, it notably fails to perform well on tasks requiring precise calculations and reasoning. In this repo, we attempt to improve ChatGPT’s performance in math-word problems by applying the wisdom of the crowds theory.  
+
+The wisdom of the crowds theory refers to the concept that the aggregate judgments of groups are often more accurate than those of the individual. In this repo, we apply this theory to OpenAI’s ChatGPT 3.5 on math-word problems by using majority voting to select numbers that appear the most often. Furthermore, we later also propose various “election” methods by which representative samples are selected from the pool of candidates as the solution instead of majority voting.
 
 # **III. Materials and Methods**
-I made use of the following tool to collect ChatGPT's responses: https://github.com/aardoh/sleepyask. sleepyask is a tool I made which allows me to collect responses from ChatGPT faster since it applies the producer-consumer problem in order to ask multiple questions in parallel.  
+**MWP Datasets.** We employed the following math-word problem question sets: DRAW-1K, ALG-514, NLU-ASDIV. These question sets contain not only the questions and answers but also the system of equations that may be used to solve the problem. An example is the following MWP:
+```bash
+Juniors boat will go 15 miles per hour in still water . If he can go 12 miles downstream in the same amount of time as it takes to go 9 miles upstream , then what is the speed of the current .
+```
+**Collecting ChatGPT's responses at scale.** I made use of the following tool to collect ChatGPT's responses: https://github.com/aardoh/sleepyask. sleepyask is a tool I made which allows me to collect responses from ChatGPT faster since it applies the producer-consumer problem in order to ask multiple questions in parallel. Before each question asked to ChatGPT, I added the following piece of text: `Solve the following math problem: `
   
 The question sets used in this experiment are:
-- DRAW-1K
-- ALG-514
-- NLU-ASDIV
   
 ### **Majority voting**
 In this repo, majority voting has the following definition. We select only numbers that appear greater than or equal to `[num of sample solutions] / 2` times
