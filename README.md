@@ -54,8 +54,8 @@ The important columns are:
 ## **Results**:
 The distribution of ChatGPT's response correctness.  
 - `all` - This means ChatGPT's solution contains all the solution in the response.  
+- `none` - This means ChatGPT's solution did not contain the solution in its response at all.  
 - `some` - This means ChatGPT's solution contains some of the solution in the response but not all of it.  
-- 
 ### **DRAW-1K**
 ![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/a33e8052-7931-4acc-b04a-1a236e0802bb)
   
