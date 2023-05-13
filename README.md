@@ -1,4 +1,5 @@
 ## **Wisdom of the Crowd on LLMs**
+LLM used in this experiment: `ChatGPT gpt-0301-01`  
 
 It is possible that the aggregate opinions of a group of LLMs can outperform the opinions of any constituent individual.  
 
