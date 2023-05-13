@@ -1,4 +1,4 @@
-## **Wisdom of the Crowd on LLM**
+## **Wisdom of the Crowd on LLMs**
 
 It is possible that the aggregate opinions of a group of LLMs can outperform the opinions of any constituent individual.  
 
