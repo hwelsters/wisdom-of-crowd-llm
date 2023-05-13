@@ -62,13 +62,13 @@ The distribution of ChatGPT's response correctness.
 - `none` - This means ChatGPT's solution did not contain the solution in its response at all.  
 - `some` - This means ChatGPT's solution contains some of the solution in the response but not all of it.  
 ### **DRAW-1K**
-![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/a33e8052-7931-4acc-b04a-1a236e0802bb)
+![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/43d37423-7921-47a0-bf48-8d5e33b70719)
   
 ### **ALG-514**
-![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/219cc55c-7a24-425f-9f55-c7ff5239dab1)
+![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/0103b652-fb49-4ab4-8032-8aa39f0354b0)
   
 ### **NLU-ASDIV**
-![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/3d5b2ef0-7c94-40cf-890c-f52941b7f506)
+![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/b0e10d00-4eab-4396-a61d-7e2d1b5d8439)
 
 ## **Things left to do**
 - Reason WHY majority vote performs better. Try to explain why wisdom of the crowd works on LLMs?  
