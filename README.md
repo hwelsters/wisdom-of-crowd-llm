@@ -1,4 +1,4 @@
-# **Wisdom of the Crowd on LLMs**
+# **The Wisdom of Crowds of LLMs**
 
 ***
 
