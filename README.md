@@ -24,7 +24,11 @@ Solve the following math problem:
 For each question set, we collected 10 sample responses for each question in the dataset.  
   
 ### **Majority voting**
-In this repo, majority voting has the following definition. We select only numbers that appear greater than or equal to `[num of sample solutions] / 2` times
+In this repo, majority voting has the following definition. 
+```
+A particular number appears in the majority solution iff it appears more than or equal to n / 2 times where n is the number of samples collected for the question.
+```
+
 For example, given the following solutions
 | Solution 1 | Solution 2 | Solution 3 |
 | --- | --- | --- |
