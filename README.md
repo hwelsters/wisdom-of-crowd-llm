@@ -4,7 +4,6 @@ LLM used in this experiment: `ChatGPT gpt-0301-01`
 ### **Abstract**
 We analyze the performance of a group of LLMs as compared to the performance of its constituent individuals.  
 We do this by performing a majority vote on the numbers that appear in the final answer.  
-In this notebook, we use the DRAW-1K and ALG-514 datasets.  
 
 This method only the numbers that appear the majority of the time. (majority = greater than half the time. ) 
 However, this method lacks real-world use-case especially in cases where an explanation is needed.  
