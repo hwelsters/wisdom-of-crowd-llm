@@ -64,3 +64,7 @@ The distribution of ChatGPT's response correctness.
   
 ### **NLU-ASDIV**
 ![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/3d5b2ef0-7c94-40cf-890c-f52941b7f506)
+
+### **Things left to do**
+- Reason WHY it performs better.
+- Draw a few conclusions from this.
