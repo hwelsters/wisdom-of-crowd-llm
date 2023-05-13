@@ -69,13 +69,13 @@ The distribution of ChatGPT's response correctness.
 - `none` - This means ChatGPT's solution did not contain the solution in its response at all.  
 - `some` - This means ChatGPT's solution contains some of the solution in the response but not all of it.  
 ### **DRAW-1K**
-![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/41d091b5-c810-4b77-9077-1c62b95bc83b)
+![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/7703dff0-2b50-4c39-9a1f-97846b837d91)
   
 ### **ALG-514**
-![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/bd646682-c7ff-4f62-965d-9958c9ad6559)
+![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/2b78e427-856a-4177-bc69-fa9a8ca44c29)
   
 ### **NLU-ASDIV**
-![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/a4114d94-0301-4385-b6f8-f93a4be2f92d)
+![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/e049a749-60e1-48f8-831a-14356a8768b9)
 
 ## **Conclusions**
 It appears that majority-vote, levenshtein distance and intersection size are fairly promising methods by which ChatGPT's performance on math-word problems can be improved. Furthermore, levenshtein distance and intersection size possess the advantage over majority vote in the sense that, since it selects a representative solution, we can use the explanations present in that solution.  
