@@ -3,7 +3,7 @@
 ***
 
 # **I. Abstract**
-In various problem domains, it has been observed that the aggregate opinions of a group can outperform the results of any one individual in the group. We study the aggregate performance of a commercially available LLM known as ChatGPT's GPT-3.5 across 10 independent runs through the question sets DRAW-1K, ALG-514 and NLU-ASDIV. We find the aggregate using majority voting performs better in terms of providing more accurate responses and fewer wrong responses compared to any individual run. Later on, we propose various election methods for selecting the best response from the various sample solutions. The dataset of ChatGPT’s responses to the various question sets are also released.
+In various problem domains, it has been observed that the aggregate opinions of a group can outperform the results of any one individual in the group. We study the aggregate performance of a commercially available LLM known as ChatGPT's GPT-3.5 across 10 independent runs through the question sets DRAW-1K, ALG-514 and NLU-ASDIV. We find the aggregate using majority voting performs better in terms of providing more accurate responses and fewer wrong responses compared to any individual run. Later on, we propose various methods for selecting the best response from the various sample solutions. The dataset of ChatGPT’s responses to the various question sets are also released.
 
 # **II. Introduction**
 Large-language models have gained popularity in recent years. At the moment, many consider OpenAI’s ChatGPT as state-of-the-art. However, it notably fails to perform well on tasks requiring precise calculations and reasoning. In this repo, we attempt to improve ChatGPT’s performance in math-word problems by applying the wisdom of the crowds theory.  
