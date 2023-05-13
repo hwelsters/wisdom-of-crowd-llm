@@ -58,13 +58,13 @@ The distribution of ChatGPT's response correctness.
 - `none` - This means ChatGPT's solution did not contain the solution in its response at all.  
 - `some` - This means ChatGPT's solution contains some of the solution in the response but not all of it.  
 ### **DRAW-1K**
-![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/43d37423-7921-47a0-bf48-8d5e33b70719)
+![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/41d091b5-c810-4b77-9077-1c62b95bc83b)
   
 ### **ALG-514**
-![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/72c67145-4c6a-4592-8901-49b5fc90bc98)
+![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/bd646682-c7ff-4f62-965d-9958c9ad6559)
   
 ### **NLU-ASDIV**
-![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/b0e10d00-4eab-4396-a61d-7e2d1b5d8439)
+![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/a4114d94-0301-4385-b6f8-f93a4be2f92d)
 
 ## **Potential issues**
 - ChatGPT's responses and the actual solution are all rounded to 3 decimals since ChatGPT likes to round irrational numbers. This could possibly create some problems. However, it seems to be pretty reasonable so far.  
