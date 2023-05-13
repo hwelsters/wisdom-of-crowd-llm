@@ -12,12 +12,16 @@ The wisdom of the crowds theory refers to the concept that the aggregate judgmen
 
 # **III. Materials and Methods**
 **MWP Datasets.** We employed the following math-word problem question sets: DRAW-1K, ALG-514, NLU-ASDIV. These question sets contain not only the questions and answers but also the system of equations that may be used to solve the problem. An example is the following MWP:
-```bash
-Juniors boat will go 15 miles per hour in still water . If he can go 12 miles downstream in the same amount of time as it takes to go 9 miles upstream , then what is the speed of the current .
 ```
-**Collecting ChatGPT's responses at scale.** I made use of the following tool to collect ChatGPT's responses: https://github.com/aardoh/sleepyask. sleepyask is a tool I made which allows me to collect responses from ChatGPT faster since it applies the producer-consumer problem in order to ask multiple questions in parallel. Before each question asked to ChatGPT, I added the following piece of text: `Solve the following math problem: `
-  
-The question sets used in this experiment are:
+Juniors boat will go 15 miles per hour in still water . 
+If he can go 12 miles downstream in the same amount of time as it takes to go 9 miles upstream , 
+then what is the speed of the current .
+```
+**Collecting ChatGPT's responses at scale.** I made use of the following tool to collect ChatGPT's responses: https://github.com/aardoh/sleepyask. sleepyask is a tool I made which allows me to collect responses from ChatGPT faster since it applies the producer-consumer problem in order to ask multiple questions in parallel. Before each question asked to ChatGPT, I added the following piece of text: 
+```
+Solve the following math problem: 
+```
+For each question set, we collected 10 sample responses for each question in the dataset.  
   
 ### **Majority voting**
 In this repo, majority voting has the following definition. We select only numbers that appear greater than or equal to `[num of sample solutions] / 2` times
