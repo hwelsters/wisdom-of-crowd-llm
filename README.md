@@ -20,10 +20,10 @@ The important columns are:
 - `sample_average` - The average across all samples.
 ### **Results**:
 #### **DRAW-1K**
-![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/d9176a89-8d49-4026-bbe4-0c02ff43a68e)
+![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/a33e8052-7931-4acc-b04a-1a236e0802bb)
   
 #### **ALG-514**
-![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/071d6c33-c1b5-41b5-bf21-835c4953b683)
+![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/219cc55c-7a24-425f-9f55-c7ff5239dab1)
   
 #### **NLU-ASDIV**
-![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/82c83e73-c247-4234-a082-2db591c1f60c)
+![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/3d5b2ef0-7c94-40cf-890c-f52941b7f506)
