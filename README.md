@@ -61,7 +61,7 @@ The distribution of ChatGPT's response correctness.
 ![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/43d37423-7921-47a0-bf48-8d5e33b70719)
   
 ### **ALG-514**
-![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/0103b652-fb49-4ab4-8032-8aa39f0354b0)
+![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/72c67145-4c6a-4592-8901-49b5fc90bc98)
   
 ### **NLU-ASDIV**
 ![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/b0e10d00-4eab-4396-a61d-7e2d1b5d8439)
