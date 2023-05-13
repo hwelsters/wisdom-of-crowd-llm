@@ -68,5 +68,6 @@ The distribution of ChatGPT's response correctness.
 ![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/3d5b2ef0-7c94-40cf-890c-f52941b7f506)
 
 ## **Things left to do**
-- Reason WHY it performs better. Try to explain why wisdom of the crowd works on LLMs?  
+- Reason WHY majority vote performs better. Try to explain why wisdom of the crowd works on LLMs?  
+- Reason WHY election methods work?  
 - Draw a few conclusions from this.
