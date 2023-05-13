@@ -1,7 +1,16 @@
 ## **Wisdom of the Crowd on LLMs**
 LLM used in this experiment: `ChatGPT gpt-0301-01`  
 
-It is possible that the aggregate opinions of a group of LLMs can outperform the opinions of any constituent individual.  
+#### **Abstract**
+We analyze the performance of a group of LLMs as compared to the performance of its constituent individuals.  
+We do this by performing a majority vote on the numbers that appear in the final answer.  
+In this notebook, we use the DRAW-1K and ALG-514 datasets.  
+
+This method only the numbers that appear the majority of the time. (majority = greater than half the time. ) 
+However, this method lacks real-world use-case especially in cases where an explanation is needed.  
+
+Later, we propose a method whereby we instead elect a response using various methods to do so.  
+This method will provide users with an explanation and is much more useful for real-world use cases.  
 
 This repo details my experiments in figuring out whether or not this is the case.  
 
