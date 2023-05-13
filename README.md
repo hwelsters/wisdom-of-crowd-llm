@@ -2,8 +2,8 @@
 
 ***
 
-## **I. Abstract**
-In various problem domains, it has been observed that the aggregate opinions of a group often outperform the results of any one individual in the group. We study the aggregate performance of a commercially available LLM known as ChatGPT across multiple nondeterministic runs by using majority voting. Later on, we propose various election methods for selecting the best response from the various sample solutions.
+# **I. Abstract**
+In various problem domains, it has been observed that the aggregate opinions of a group often outperform the results of any one individual in the group. We study the aggregate performance of a commercially available LLM known as ChatGPT across 10 nondeterministic runs through the question sets DRAW-1K, ALG-514 and NLU-ASDIV. We find the aggregate using majority voting performs better in terms of providing more accurate responses and fewer wrong responses compared to any individual run. Later on, we propose various election methods for selecting the best response from the various sample solutions. The dataset of ChatGPT’s responses to the various question sets are also released.
 For example, given the following solutions
 | Solution 1 | Solution 2 | Solution 3 |
 | --- | --- | --- |
