@@ -2,7 +2,8 @@
 LLM used in this experiment: `ChatGPT gpt-0301-01`  
 
 ## **Abstract**
-We analyze the performance of a group of LLMs as compared to the performance of its constituent individuals.  
+In various problem domains, there have been observed instances in which the aggregate opinions of a group outperforms the opinions of any constituent individual.  
+We analyze the aggregate performance of a group of a single LLM over multiple nondeterministic runs.  
 We do this by performing a majority vote on the numbers that appear in the final answer.  
 For example, given the following solutions
 | Solution 1 | Solution 2 | Solution 3 |
@@ -17,12 +18,12 @@ The majority solution will be
 | 1 | 
 | 6 |
 
-Since both 1 and 6 appear 2 times where 2 ≥ 3 / 2 where 3 is the number of sample solutions.   
+Since both 1 and 6 appear 2 times where 2 > 3 / 2 where 3 is the number of sample solutions.   
 
-This method only the numbers that appear the majority of the time. (majority = greater than half the time. ) 
+This method only selects the numbers that appear the majority of the time. (majority = greater than half the time. ) 
 However, this method lacks real-world use-case especially in cases where an explanation is needed.  
 
-Later, we propose a method whereby we instead elect a response using various methods to do so.  
+As such, we later propose a method whereby we instead elect a response using various methods to do so.  
 This method will provide users with an explanation and is much more useful for real-world use cases.  
 
 This repo details my experiments in figuring out whether or not this is the case.  
@@ -35,6 +36,7 @@ The datasets in which I have tried this on are:
 
 ## **Gotchas**
 - ChatGPT's responses and the actual solution are all rounded to 3 decimals.  
+- In the experiment, we check the entire response for decimals and include it in the solution. If there is a more accurate to do this, I am open to suggestions. As such, one possible argument against this method is that the majority array might simply be larger and ChatGPT simply "casts a wider net" in which it may be lucky. In this experiment, we attempt to show that on average, the majority array is often similarly sized, if not smaller, to its individual sample solutions.  
 
 ## **Election methods**
 We employ various methods for selecting a representative sample.  
