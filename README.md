@@ -48,8 +48,8 @@ Since both 1 and 6 appear 2 times where `2 > 3 / 2 = 1.5`
 ## **Election methods**
 In addition to using majority voting, we also use ‘election methods’ to select a representative sample from a set of candidate solutions. In this paper, we further outline the various methods that are used such as computing levenshtein distance, intersection size and picking the sample with the largest size. 
 - **Levenshtein distance.** This is the string metric considered by the Soviet mathematician Vladimir Levenshtein. In this paper, we use the levenshtein as an election method whereby the solution array with the smallest levenshtein distance from the majority solution is selected. The result of the levenshtein distance between two arrays a and b are given by lev(a,b) where:  ![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/d551f0fb-5c45-45f7-bf35-7ba522f8aec7)
-- **Intersection size.** The intersection size of two arrays a and b are given by sect(a, b) where sect(a, b)=|a ∩ b|. We pick the candidate solution with the largest intersection size.  
-- **Picking the sample with the largest size.** Given a set of candidate solutions S, we pick the first candidate solution x such that a  S(|x| ≥ |a|).
+- **Intersection size.** The intersection size of two arrays a and b are given by `sect(a, b)` where `sect(a, b)=|a ∩ b|`. We pick the candidate solution with the largest intersection size.  
+- **Picking the sample with the largest size.** Given a set of candidate solutions S, we pick the first candidate solution x such that a  `S(|x| ≥ |a|)`.
 
 ## **Extracting answers**
 We extract all decimals from ChatGPT's entire response. For example, given the text `1 + 1 = 2`, the solution will be `[1, 2]`. Of course, this isn't 100% accurate. As such, this will only be an estimate of ChatGPT's performance. However, based on what we have seen of ChatGPT's responses, it is a fairly reasonable estimate. If there is a more accurate to do this programmatically, we are open to suggestions.  
