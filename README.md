@@ -33,6 +33,9 @@ The datasets in which I have tried this on are:
 - ALG-514  
 - NLU-ASDIV
 
+## **Gotchas**
+- ChatGPT's responses and the actual solution are all rounded to 3 decimals.  
+
 ## **Election methods**
 We employ various methods for selecting a representative sample.  
 - `Levenshtein distance` - We look at the levenshtein distance between the sample solution and the majority solution. We select the one with the smallest levenshtein distance.   
@@ -49,6 +52,10 @@ The important columns are:
 - `max_size_correct` - This is the results of the arrays that are created by electing the array with the maximum size among the samples.
 - `sample_average` - The average across all samples.
 ## **Results**:
+The distribution of ChatGPT's response correctness.  
+- `all` - This means ChatGPT's solution contains all the solution in the response.  
+- `some` - This means ChatGPT's solution contains some of the solution in the response but not all of it.  
+- 
 ### **DRAW-1K**
 ![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/a33e8052-7931-4acc-b04a-1a236e0802bb)
   
