@@ -9,6 +9,13 @@ In various problem domains, it has been observed that the aggregate opinions of 
 The "wisdom of the crowd" refers to theory where independent judgements are combined in order to achieve a final judgement with the greatest accuracy. Due to the non-determinism of LLMs such as ChatGPT, we treat each sample solution provided by ChatGPT as an independent judgement in this experiment.  
 
 # **III. Materials and Methods**
+I made use of the following tool to collect ChatGPT's responses: https://github.com/aardoh/sleepyask. Sleepyask is a tool I made which makes collecting data with ChatGPT significantly faster since it applies the producer-consumer problem in order to ask multiple questions in parallel.  
+  
+The question sets used in this experiment are:
+- DRAW-1K
+- ALG-514
+- NLU-ASDIV
+
 For example, given the following solutions
 | Solution 1 | Solution 2 | Solution 3 |
 | --- | --- | --- |
