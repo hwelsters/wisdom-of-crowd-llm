@@ -72,7 +72,7 @@ The distribution of ChatGPT's response correctness.
 
 ## **Things left to do**
 - Reason WHY majority vote performs better. Try to explain why wisdom of the crowd works on LLMs?  
-- Reason WHY election methods work?  
+- Reason WHY election methods work? For example, I am quite confused as to why most majority would work better than majority. Are there numbers that appear very often that are important that aren't part of the solution?  
 - Draw a few conclusions from this.
 
 
