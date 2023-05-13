@@ -45,7 +45,7 @@ The following majority solution will be created:
 Since both 1 and 6 appear 2 times where `2 > 3 / 2 = 1.5`
 
 ## **Election methods**
-Instead of getting the majority vote response, we also use various election methods for selecting a single representative sample among the various solutions. Election methods also have an advantage over majority voting in that since we are selecting a sample from the candidates, we get the explanations that come with it.  
+Instead of getting the majority vote response, we also use various election methods for selecting a single representative sample among the various solutions. Election methods also have an advantage over majority voting in that since we are selecting a sample from the candidate solutions, we get the explanations that come with it.  
 The various methods are as follows:  
 - `Levenshtein distance` - We look at the levenshtein distance between the sample solution and the majority solution. We select the one with the smallest levenshtein distance.   
 - `Most majority` - We select the sample solution where the intersection between the sample solution and the majority solution has the greatest size.  
