@@ -3,21 +3,22 @@
 ***
 
 # **I. Abstract**
-In various problem domains, it has been observed that the aggregate opinions of a group can outperform the results of any one individual in the group. We study the aggregate performance of a commercially available LLM known as ChatGPT across 10 nondeterministic runs each through the math word problem question sets DRAW-1K, ALG-514 and NLU-ASDIV. We find the aggregate using majority voting performs better in terms of providing more accurate responses and fewer wrong responses compared to any individual run. Later on, we propose various election methods for selecting the best response from the various sample solutions which appears to bring about even greater improvements in performance. The dataset of ChatGPT’s responses to the various question sets are also provided in this repo.
+In various problem domains, it has been observed that the aggregate opinions of a group can outperform the results of any one individual in the group. We study the aggregate performance of a commercially available LLM known as ChatGPT's GPT-3.5 across 10 nondeterministic runs each through the question sets DRAW-1K, ALG-514 and NLU-ASDIV. We find the aggregate using majority voting performs better in terms of providing more accurate responses and fewer wrong responses compared to any individual run. Later on, we propose various election methods for selecting the best response from the various sample solutions. The dataset of ChatGPT’s responses to the various question sets are also released.
 
 # **II. Introduction**
 Large-language models have gained popularity in recent years. At the moment, many consider OpenAI’s ChatGPT as state-of-the-art. However, it notably fails to perform well on tasks requiring precise calculations and reasoning. In this repo, we attempt to improve ChatGPT’s performance in math-word problems by applying the wisdom of the crowds theory.  
 
 The wisdom of the crowds theory refers to the concept that the aggregate judgments of groups are often more accurate than those of the individual. In this repo, we apply this theory to OpenAI’s ChatGPT 3.5 on math-word problems by using majority voting to select numbers that appear the most often. Furthermore, we later also propose various “election” methods by which representative samples are selected from the pool of candidates as the solution instead of majority voting.
 
-# **III. Materials and Methods**
-**MWP Datasets.** We employed the following math-word problem question sets: DRAW-1K, ALG-514, NLU-ASDIV. These question sets contain not only the questions and answers but also the system of equations that may be used to solve the problem. An example is the following MWP:
+# **II. Materials and Methods**
+**MWP Datasets.** In our experiment, we employed the following math-word problem question sets: DRAW-1K, ALG-514, NLU-ASDIV. These question sets contain not only the questions and the associated answers but also the representative system of equations that can be used to solve the problem. As an example, consider the following math word problem.
+
 ```
-Juniors boat will go 15 miles per hour in still water . 
-If he can go 12 miles downstream in the same amount of time as it takes to go 9 miles upstream , 
-then what is the speed of the current .
+My mothers age is three times my age . The sum of our ages is 40 . How old am I ? How old is my mother ?
 ```
-**Collecting ChatGPT's responses at scale.** I made use of the following tool to collect ChatGPT's responses: https://github.com/aardoh/sleepyask. sleepyask is a tool I made which allows me to collect responses from ChatGPT faster since it applies the producer-consumer problem in order to ask multiple questions in parallel. Before each question asked to ChatGPT, I added the following piece of text: 
+In addition to the correct answers, which are `10.0` and `30.0`, it also includes the system of equations needed to solve the problem `x + y = 40` and `y = 3*x`. These equations are representative of the problem.
+
+**Collecting ChatGPT's responses at scale.** ChatGPT has released an API for public use. We used a tool named sleepyask to collect GPT-3.5’s responses at scale. This tool was made by us and allows us to collect a large amount of responses from ChatGPT. It applies the producer-consumer problem to ChatGPT to ask questions in parallel, allowing us to collect ChatGPT’s responses at a rapid pace. For the experiments, we suffixed each question with the following phrase before posting it to ChatGPT as a question.
 ```
 Solve the following math problem: 
 ```
@@ -26,7 +27,7 @@ For each question set, we collected 10 sample responses for each question in the
 ### **Majority voting**
 In this repo, majority voting has the following definition. 
 ```
-A particular number appears in the majority solution iff it appears more than or equal to n / 2 times where n is the number of samples collected for the question.
+Majority voting produces a majority solution. A particular number appears in the majority solution iff the number of times it appears across various samples, x, is greater than or equal to n where n is the number of samples divided by two. In other words, a particular number appears in the majority solution iff x  n / 2.
 ```
 
 For example, given the following solutions
@@ -45,11 +46,8 @@ The following majority solution will be created:
 Since both 1 and 6 appear 2 times where `2 > 3 / 2 = 1.5`
 
 ## **Election methods**
-Instead of getting the majority vote response, we also use various election methods for selecting a single representative sample among the various solutions. Election methods also have an advantage over majority voting in that since we are selecting a sample from the candidate solutions, we get the explanations that come with it.  
-The various methods are as follows:  
-- `Levenshtein distance` - We look at the levenshtein distance between the candidate solution and the majority solution. We select the one with the smallest levenshtein distance.   
-- `Most majority` - We select the sample solution where the intersection between the sample solution and the majority solution has the greatest size.  
-- `Longest` - We select the candidate solution with greatest set size.  
+In addition to using majority voting, we also use ‘election methods’ to select a representative sample from a set of candidate solutions. In this paper, we further outline the various methods that are used such as computing levenshtein distance, intersection size and picking the sample with the largest size. 
+- **Levenshtein distance.** This is the string metric considered by the Soviet mathematician Vladimir Levenshtein. In this paper, we use the levenshtein as an election method whereby the solution array with the smallest levenshtein distance from the majority solution is selected. The result of the levenshtein distance between two arrays a and b are given by lev(a,b) where:    
 
 ## **Extracting answers**
 We extract all decimals from ChatGPT's entire response. For example, given the text `1 + 1 = 2`, the solution will be `[1, 2]`. Of course, this isn't 100% accurate. As such, this will only be an estimate of ChatGPT's performance. However, based on what we have seen of ChatGPT's responses, it is a fairly reasonable estimate. If there is a more accurate to do this programmatically, we are open to suggestions.  
