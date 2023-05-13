@@ -17,7 +17,7 @@ The question sets used in this experiment are:
 - NLU-ASDIV
   
 ### **Majority voting**
-In this repo, majority voting has the following definition. We select only numbers that appear greater than `[num of sample solutions] / 2` times
+In this repo, majority voting has the following definition. We select only numbers that appear greater than or equal to `[num of sample solutions] / 2` times
 For example, given the following solutions
 | Solution 1 | Solution 2 | Solution 3 |
 | --- | --- | --- |
