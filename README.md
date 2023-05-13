@@ -34,6 +34,10 @@ The datasets in which I have tried this on are:
 - NLU-ASDIV
 
 ## **Election methods**
+We employ various methods for selecting a representative sample.  
+- `Levenshtein distance` - We look at the levenshtein distance between the sample solution and the majority solution. We select the one with the smallest levenshtein distance.   
+- `Most majority` - We select the sample solution where the intersection between the sample solution and the majority solution has the greatest length.  
+- `Longest` - We select the sample solution with the most numbers.  
 
 
 ## **Stats**
