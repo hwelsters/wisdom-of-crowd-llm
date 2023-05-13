@@ -1,7 +1,7 @@
-## **Wisdom of the Crowd on LLMs**
+# **Wisdom of the Crowd on LLMs**
 LLM used in this experiment: `ChatGPT gpt-0301-01`  
 
-#### **Abstract**
+### **Abstract**
 We analyze the performance of a group of LLMs as compared to the performance of its constituent individuals.  
 We do this by performing a majority vote on the numbers that appear in the final answer.  
 In this notebook, we use the DRAW-1K and ALG-514 datasets.  
