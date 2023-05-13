@@ -47,11 +47,11 @@ We employ various methods for selecting a representative sample.
 
 ## **Stats**
 The important columns are:  
-- `sample_[num]` - Results of the array from sample [num]
-- `majority` - This is the results of the arrays that are created by selecting values that appear a majority amount of times.  
-- `levenshtein_correct` - This is the results of the arrays that are created by electing the array with the shortest levenshtein distance to the majority among the samples.  
-- `most_majority_correct` - This is the results of the arrays that are created by electing the array with the most elements from the majority array among the samples.
-- `max_size_correct` - This is the results of the arrays that are created by electing the array with the maximum size among the samples.
+- `sample_[num]` - Results of the solutions from sample [num]
+- `majority` - This is the results of the solutions that are created by selecting values that appear a majority amount of times.  
+- `levenshtein_correct` - This is the results of the solutions that are created by electing the array with the shortest levenshtein distance to the majority among the samples.  
+- `most_majority_correct` - This is the results of the solutions that are created by electing the array with the most elements from the majority array among the samples.
+- `max_size_correct` - This is the results of the solutions that are created by electing the array with the maximum size among the samples.
 - `sample_average` - The average across all samples.
 ## **Results**:
 The distribution of ChatGPT's response correctness.  
