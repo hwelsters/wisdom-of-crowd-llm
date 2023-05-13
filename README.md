@@ -2,9 +2,7 @@
 LLM used in this experiment: `ChatGPT gpt-0301-01`  
 
 ## **Abstract**
-In various problem domains, there have been observed instances in which the aggregate opinions of a group outperforms the opinions of any constituent individual.  
-We analyze the aggregate performance of a group of a single LLM over multiple nondeterministic runs.  
-We do this by performing a majority vote on the numbers that appear in the final answer.  
+In various problem domains, there have been observed instances in which the aggregate opinions of a group outperforms the opinions of any constituent individual. As such, in this experiment, we analyze the aggregate performance of a single LLM over multiple nondeterministic runs. We do this by performing a majority vote on the numbers that appear in the final answer.  
 For example, given the following solutions
 | Solution 1 | Solution 2 | Solution 3 |
 | --- | --- | --- |
