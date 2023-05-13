@@ -31,7 +31,7 @@ The following majority solution will be created:
 | 1 | 
 | 6 |
 
-Since both 1 and 6 appear 2 times where `2 times` and `2 > 3 / 2 = 1.5`
+Since both 1 and 6 appear 2 times where `2 > 3 / 2 = 1.5`
 
 ## **Election methods**
 Instead of getting the majority vote response, we also use various election methods for selecting a single representative sample among the various solutions.  
