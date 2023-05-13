@@ -36,7 +36,7 @@ The datasets in which I have tried this on are:
 
 ## **Gotchas**
 - ChatGPT's responses and the actual solution are all rounded to 3 decimals.  
-- In the experiment, we check the entire response for decimals and include it in the solution. If there is a more accurate to do this, I am open to suggestions. As such, one possible argument against this method is that the majority array might simply be larger and ChatGPT simply "casts a wider net" in which it may be lucky. In this experiment, we attempt to show that on average, the majority array is often similarly sized, if not smaller, to its individual sample solutions.  
+- In the experiment, we check the entire response for decimals and include it in the solution. If there is a more accurate to do this, I am open to suggestions. As such, one possible argument against this method is that the majority array might simply be larger and ChatGPT simply "casts a wider net" in which it may be lucky. In this experiment, we attempt to show that on average, the majority array is often similarly sized, if not smaller, than its individual sample solutions.  
 
 ## **Election methods**
 We employ various methods for selecting a representative sample.  
