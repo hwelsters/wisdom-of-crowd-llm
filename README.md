@@ -45,7 +45,7 @@ The following majority solution will be created:
 Since both 1 and 6 appear 2 times where `2 > 3 / 2 = 1.5`
 
 ## **Election methods**
-Instead of getting the majority vote response, we also use various election methods for selecting a single representative sample among the various solutions.  
+Instead of getting the majority vote response, we also use various election methods for selecting a single representative sample among the various solutions. Election methods also have an advantage over majority voting in that since we are selecting a sample from the candidates, we get the explanations that come with it.  
 The various methods are as follows:  
 - `Levenshtein distance` - We look at the levenshtein distance between the sample solution and the majority solution. We select the one with the smallest levenshtein distance.   
 - `Most majority` - We select the sample solution where the intersection between the sample solution and the majority solution has the greatest size.  
@@ -82,8 +82,8 @@ The distribution of ChatGPT's response correctness.
 - In the experiment, we check the entire response for decimals and include it in the solution. If there is a more accurate to do this, I am open to suggestions. As such, one possible argument against this method is that the majority array might simply be larger and ChatGPT simply "casts a wider net" in which it may be lucky. In this experiment, we attempt to show that on average, the majority array is often similarly sized, if not smaller, than its individual sample solutions. Furthermore, we use `Longest` as an election method and it doesn't perform as well, attempting to counteract this argument.
 
 ## **Things left to do**
-- Reason WHY majority vote performs better. Try to explain why wisdom of the crowd works on LLMs?  
-- Reason WHY election methods work? For example, I am quite confused as to why most majority would work better than majority. Are there numbers that appear very often that are important that aren't part of the solution?  
-- Ways to apply this to other problem domains?
+- Give a reason as to WHY majority vote performs better. Try to explain why wisdom of the crowd works on LLMs.
+- Give a reason as to WHY election methods work. For example, I am quite confused as to why most majority would work better than majority. Are there numbers that appear very often that are important that somehow don't appear often enough to appear in the majority solution?  
+- Ways to apply this to other problem domains. Math word problems are awfully limited and might not have a whole lot of use. 
 
 
