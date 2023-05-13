@@ -3,7 +3,7 @@
 ***
 
 # **I. Abstract**
-In various problem domains, it has been observed that the aggregate opinions of a group often outperform the results of any one individual in the group. We study the aggregate performance of a commercially available LLM known as ChatGPT across 10 nondeterministic runs through the question sets DRAW-1K, ALG-514 and NLU-ASDIV. We find the aggregate using majority voting performs better in terms of providing more accurate responses and fewer wrong responses compared to any individual run. Later on, we propose various election methods for selecting the best response from the various sample solutions. The dataset of ChatGPT’s responses to the various question sets are also released.
+In various problem domains, it has been observed that the aggregate opinions of a group often outperform the results of any one individual in the group. We study the aggregate performance of a commercially available LLM known as ChatGPT across 10 nondeterministic runs through the question sets DRAW-1K, ALG-514 and NLU-ASDIV. We find the aggregate using majority voting performs better in terms of providing more accurate responses and fewer wrong responses compared to any individual run. Later on, we propose various election methods for selecting the best response from the various sample solutions which appears to bring about even greater improvements in performance. The dataset of ChatGPT’s responses to the various question sets are also released.
 
 # **II. Introduction**
 The "wisdom of the crowd" refers to theory where independent judgements are combined in order to achieve a final judgement with the greatest accuracy. Due to the non-determinism of LLMs such as ChatGPT, we treat each sample solution provided by ChatGPT as an independent judgement in this experiment.  
@@ -15,7 +15,9 @@ The question sets used in this experiment are:
 - DRAW-1K
 - ALG-514
 - NLU-ASDIV
-
+  
+### **Majority voting**
+In this repo, majority voting has the following definition. We select only numbers that appear greater than `[num of sample solutions] / 2` times
 For example, given the following solutions
 | Solution 1 | Solution 2 | Solution 3 |
 | --- | --- | --- |
@@ -23,15 +25,14 @@ For example, given the following solutions
 | 3 | 4 | 5 |
 | 6 | 0 | 6 |
 
-The majority solution will be 
+The following majority solution will be created:
 | Solution |
 | --- |
 | 1 | 
 | 6 |
 
-Since both 1 and 6 appear 2 times where 2 > 3 / 2 where 3 is the number of sample solutions.   
+Since both 1 and 6 appear 2 times where `2 times` and `2 > 3 / 2 = 1.5`
 
-This method only selects the numbers that appear the majority of the time. (majority = greater than half the time. ) 
 However, this method lacks real-world use-case especially in cases where an explanation is needed.  
 
 As such, we later propose a method whereby we instead elect a response using various methods to do so.  
