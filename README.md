@@ -1,8 +1,9 @@
 # **Wisdom of the Crowd on LLMs**
-LLM used in this experiment: `ChatGPT gpt-0301-01`  
 
-## **Abstract**
-In various problem domains, there have been observed instances in which the aggregate opinions of a group outperforms the opinions of any constituent individual. As such, in this experiment, we analyze the aggregate performance of a single LLM over multiple nondeterministic runs. We do this by performing a majority vote on the numbers that appear in the final answer.  
+***
+
+## **I. Abstract**
+In various problem domains, it has been observed that the aggregate opinions of a group often outperform the results of any one individual in the group. We study the aggregate performance of a commercially available LLM known as ChatGPT across multiple nondeterministic runs by using majority voting. Later on, we propose various election methods for selecting the best response from the various sample solutions.
 For example, given the following solutions
 | Solution 1 | Solution 2 | Solution 3 |
 | --- | --- | --- |
