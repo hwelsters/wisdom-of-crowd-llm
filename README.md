@@ -4,6 +4,20 @@ LLM used in this experiment: `ChatGPT gpt-0301-01`
 ## **Abstract**
 We analyze the performance of a group of LLMs as compared to the performance of its constituent individuals.  
 We do this by performing a majority vote on the numbers that appear in the final answer.  
+For example, given the following solutions
+| Solution 1 | Solution 2 | Solution 3 |
+| --- | --- | --- |
+| 1 | 1 | 2 |
+| 3 | 4 | 5 |
+| 6 | 0 | 6 |
+
+The majority solution will be 
+| Solution |
+| --- |
+| 1 | 
+| 6 |
+
+Since both 1 and 6 appear 2 times where 2 ≥ 3 / 2 where 3 is the number of sample solutions.   
 
 This method only the numbers that appear the majority of the time. (majority = greater than half the time. ) 
 However, this method lacks real-world use-case especially in cases where an explanation is needed.  
@@ -18,6 +32,9 @@ The datasets in which I have tried this on are:
 - DRAW-1K
 - ALG-514  
 - NLU-ASDIV
+
+## **Election methods**
+
 
 ## **Stats**
 The important columns are:  
