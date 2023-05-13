@@ -43,10 +43,6 @@ The various methods are as follows:
 ## **Extracting answers**
 We extract all decimals from ChatGPT's entire response. For example, given the text `1 + 1 = 2`, the solution will be `[1, 2]`. Of course, this isn't 100% accurate. As such, this will only be an estimate of ChatGPT's performance. However, based on what we have seen of ChatGPT's responses, it is a fairly reasonable estimate. If there is a more accurate to do this programmatically, we are open to suggestions.  
 
-## **Possible Gotchas**
-- ChatGPT's responses and the actual solution are all rounded to 3 decimals since ChatGPT likes to round irrational numbers. This could possibly create some problems. However, none have been observed so far but it is definitely possible.
-- In the experiment, we check the entire response for decimals and include it in the solution. If there is a more accurate to do this, I am open to suggestions. As such, one possible argument against this method is that the majority array might simply be larger and ChatGPT simply "casts a wider net" in which it may be lucky. In this experiment, we attempt to show that on average, the majority array is often similarly sized, if not smaller, than its individual sample solutions.  
-
 # **Results**
 The important columns are:  
 - `sample_[num]` - Results of the solutions from sample [num]
@@ -70,7 +66,13 @@ The distribution of ChatGPT's response correctness.
 ### **NLU-ASDIV**
 ![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/b0e10d00-4eab-4396-a61d-7e2d1b5d8439)
 
+## **Potential issues**
+- ChatGPT's responses and the actual solution are all rounded to 3 decimals since ChatGPT likes to round irrational numbers. This could possibly create some problems. However, none have been observed so far but it is definitely possible.
+- In the experiment, we check the entire response for decimals and include it in the solution. If there is a more accurate to do this, I am open to suggestions. As such, one possible argument against this method is that the majority array might simply be larger and ChatGPT simply "casts a wider net" in which it may be lucky. In this experiment, we attempt to show that on average, the majority array is often similarly sized, if not smaller, than its individual sample solutions. Furthermore, we use `Longest` as an election method and it doesn't perform as well, attempting to counteract this argument.
+
 ## **Things left to do**
 - Reason WHY majority vote performs better. Try to explain why wisdom of the crowd works on LLMs?  
 - Reason WHY election methods work?  
 - Draw a few conclusions from this.
+
+
