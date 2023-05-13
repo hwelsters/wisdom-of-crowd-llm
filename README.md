@@ -4,6 +4,11 @@
 
 # **I. Abstract**
 In various problem domains, it has been observed that the aggregate opinions of a group often outperform the results of any one individual in the group. We study the aggregate performance of a commercially available LLM known as ChatGPT across 10 nondeterministic runs through the question sets DRAW-1K, ALG-514 and NLU-ASDIV. We find the aggregate using majority voting performs better in terms of providing more accurate responses and fewer wrong responses compared to any individual run. Later on, we propose various election methods for selecting the best response from the various sample solutions. The dataset of ChatGPT’s responses to the various question sets are also released.
+
+# **II. Introduction**
+The "wisdom of the crowd" refers to theory where independent judgements are combined in order to achieve a final judgement with the greatest accuracy. Due to the non-determinism of LLMs such as ChatGPT, we treat each sample solution provided by ChatGPT as an independent judgement in this experiment.  
+
+# **III. Materials and Methods**
 For example, given the following solutions
 | Solution 1 | Solution 2 | Solution 3 |
 | --- | --- | --- |
