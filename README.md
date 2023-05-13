@@ -33,31 +33,21 @@ The following majority solution will be created:
 
 Since both 1 and 6 appear 2 times where `2 times` and `2 > 3 / 2 = 1.5`
 
-However, this method lacks real-world use-case especially in cases where an explanation is needed.  
+## **Election methods**
+Instead of getting the majority vote response, we also use various election methods for selecting a single representative sample among the various solutions.  
+The various methods are as follows:  
+- `Levenshtein distance` - We look at the levenshtein distance between the sample solution and the majority solution. We select the one with the smallest levenshtein distance.   
+- `Most majority` - We select the sample solution where the intersection between the sample solution and the majority solution has the greatest size.  
+- `Longest` - We select the sample solution with greatest set size.  
 
-As such, we later propose a method whereby we instead elect a response using various methods to do so.  
-This method will provide users with an explanation and is much more useful for real-world use cases.  
-
-This repo details my experiments in figuring out whether or not this is the case.  
-
-I have done this experiment on three datasets, and it appears to be the case so far.  
-The datasets in which I have tried this on are:
-- DRAW-1K
-- ALG-514  
-- NLU-ASDIV
+## **Extracting answers**
+We extract all decimals from ChatGPT's entire response. For example, given the text `1 + 1 = 2`, the solution will be `[1, 2]`. Of course, this isn't 100% accurate. As such, this will only be an estimate of ChatGPT's performance. However, based on what we have seen of ChatGPT's responses, it is a fairly reasonable estimate. If there is a more accurate to do this programmatically, we are open to suggestions.  
 
 ## **Possible Gotchas**
 - ChatGPT's responses and the actual solution are all rounded to 3 decimals since ChatGPT likes to round irrational numbers. This could possibly create some problems. However, none have been observed so far but it is definitely possible.
 - In the experiment, we check the entire response for decimals and include it in the solution. If there is a more accurate to do this, I am open to suggestions. As such, one possible argument against this method is that the majority array might simply be larger and ChatGPT simply "casts a wider net" in which it may be lucky. In this experiment, we attempt to show that on average, the majority array is often similarly sized, if not smaller, than its individual sample solutions.  
 
-## **Election methods**
-We employ various methods for selecting a representative sample.  
-- `Levenshtein distance` - We look at the levenshtein distance between the sample solution and the majority solution. We select the one with the smallest levenshtein distance.   
-- `Most majority` - We select the sample solution where the intersection between the sample solution and the majority solution has the greatest length.  
-- `Longest` - We select the sample solution with the most numbers.  
-
-
-## **Stats**
+# **Results**
 The important columns are:  
 - `sample_[num]` - Results of the solutions from sample [num]
 - `majority` - This is the results of the solutions that are created by selecting values that appear a majority amount of times.  
@@ -65,7 +55,8 @@ The important columns are:
 - `most_majority_correct` - This is the results of the solutions that are created by electing the array with the most elements from the majority array among the samples.
 - `max_size_correct` - This is the results of the solutions that are created by electing the array with the maximum size among the samples.
 - `sample_average` - The average across all samples.
-## **Results**:
+
+
 The distribution of ChatGPT's response correctness.  
 - `all` - This means ChatGPT's solution contains all the solution in the response.  
 - `none` - This means ChatGPT's solution did not contain the solution in its response at all.  
