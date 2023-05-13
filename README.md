@@ -47,9 +47,9 @@ Since both 1 and 6 appear 2 times where `2 > 3 / 2 = 1.5`
 ## **Election methods**
 Instead of getting the majority vote response, we also use various election methods for selecting a single representative sample among the various solutions. Election methods also have an advantage over majority voting in that since we are selecting a sample from the candidate solutions, we get the explanations that come with it.  
 The various methods are as follows:  
-- `Levenshtein distance` - We look at the levenshtein distance between the sample solution and the majority solution. We select the one with the smallest levenshtein distance.   
+- `Levenshtein distance` - We look at the levenshtein distance between the candidate solution and the majority solution. We select the one with the smallest levenshtein distance.   
 - `Most majority` - We select the sample solution where the intersection between the sample solution and the majority solution has the greatest size.  
-- `Longest` - We select the sample solution with greatest set size.  
+- `Longest` - We select the candidate solution with greatest set size.  
 
 ## **Extracting answers**
 We extract all decimals from ChatGPT's entire response. For example, given the text `1 + 1 = 2`, the solution will be `[1, 2]`. Of course, this isn't 100% accurate. As such, this will only be an estimate of ChatGPT's performance. However, based on what we have seen of ChatGPT's responses, it is a fairly reasonable estimate. If there is a more accurate to do this programmatically, we are open to suggestions.  
