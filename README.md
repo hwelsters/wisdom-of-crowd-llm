@@ -67,7 +67,7 @@ The distribution of ChatGPT's response correctness.
 ![image](https://github.com/hwelsters/wisdom-of-crowd-llm/assets/84760072/b0e10d00-4eab-4396-a61d-7e2d1b5d8439)
 
 ## **Potential issues**
-- ChatGPT's responses and the actual solution are all rounded to 3 decimals since ChatGPT likes to round irrational numbers. This could possibly create some problems. However, none have been observed so far but it is definitely possible.
+- ChatGPT's responses and the actual solution are all rounded to 3 decimals since ChatGPT likes to round irrational numbers. This could possibly create some problems. However, it seems to be pretty reasonable so far.  
 - In the experiment, we check the entire response for decimals and include it in the solution. If there is a more accurate to do this, I am open to suggestions. As such, one possible argument against this method is that the majority array might simply be larger and ChatGPT simply "casts a wider net" in which it may be lucky. In this experiment, we attempt to show that on average, the majority array is often similarly sized, if not smaller, than its individual sample solutions. Furthermore, we use `Longest` as an election method and it doesn't perform as well, attempting to counteract this argument.
 
 ## **Things left to do**
