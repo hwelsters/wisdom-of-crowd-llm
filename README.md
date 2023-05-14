@@ -10,7 +10,7 @@ Large-language models have gained popularity in recent years. At the moment, man
 The wisdom of the crowds theory refers to the concept that the aggregate judgments of groups are often more accurate than those of the individual. Applying this theory to LLMs could be useful in producing better performing models in the future. As a first step towards this, we apply this theory to OpenAI’s ChatGPT 3.5 on math-word problems by aggregating ChatGPT’s results over 10 separate runs. We use methods like majority voting to select numbers that appear the most often and later also propose various “election methods” by which representative samples are selected from the pool of candidates as the solution instead of creating an entirely new solution using majority vote.
 This paper will proceed as follows. In Section 2, we will describe the methodologies used to aggregate ChatGPT’s results as well as methods of evaluating ChatGPT’s performance programmatically. Then, we describe the results of our experiment in Section 3. This is then followed by a discussion of related work (Section 4) and future work (Section 5.)
 
-# **III. Materials and Methods**
+# **III. Methodology**
 **MWP Datasets.** In our experiment, we employed the following math-word problem question sets: DRAW-1K, ALG-514, NLU-ASDIV. These question sets contain not only the questions and the associated answers but also the representative system of equations that can be used to solve the problem. As an example, consider the following math word problem.
 
 ```
@@ -18,7 +18,8 @@ My mothers age is three times my age . The sum of our ages is 40 . How old am I 
 ```
 In addition to the correct answers, which are `10.0` and `30.0`, it also includes the system of equations needed to solve the problem `x + y = 40` and `y = 3*x`. These equations are representative of the problem.
 
-**Collecting ChatGPT's responses at scale.** ChatGPT has released an API for public use. We used a tool named sleepyask to collect GPT-3.5’s responses at scale. This tool was made by us and allows us to collect a large amount of responses from ChatGPT. It applies the producer-consumer problem to ChatGPT to ask questions in parallel, allowing us to collect ChatGPT’s responses at a rapid pace. For the experiments, we suffixed each question with the following phrase before posting it to ChatGPT as a question.
+**Collecting ChatGPT's responses at scale.** ChatGPT has released an API for public use. We used a tool named sleepyask to collect ChatGPT’s responses at scale. This tool was made by Noel and allows us to collect a large amount of responses from ChatGPT. It applies the producer-consumer problem to ChatGPT to ask questions in parallel, allowing us to collect ChatGPT’s responses at a rapid pace. 
+We used sleepyask to produce the dataset of ten samples each from DRAW-1K, ALG-514, and NLU-ASDIV. These samples were all collected on May 13th, 2023. Before posting each question to GPT-3.5, we prefixed each question with the following text:
 ```
 Solve the following math problem: 
 ```
@@ -27,7 +28,7 @@ For each question set, we collected 10 sample responses for each question in the
 ### **Majority voting**
 In this repo, majority voting has the following definition. 
 ```
-Majority voting produces a majority solution. A particular number appears in the majority solution iff the number of times it appears across various samples, x, is greater than or equal to n where n is the number of samples divided by two. In other words, a particular number appears in the majority solution iff x  n / 2.
+Majority voting produces a majority solution from a pool of candidate solutions. A particular number appears in the majority solution iff the number of times it appears across various samples, x, is greater than or equal to n where n is the number of samples divided by two. In other words, a particular number appears in the majority solution iff x  n / 2.
 ```
 
 For example, given the following solutions
